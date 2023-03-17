@@ -1,0 +1,19 @@
+.hero__inner {
+    height: 100vh;
+    padding: 10px;
+}
+
+.card {
+    width: 18rem;
+}
+
+.hero__list {
+    width: 100%;
+    height: 90vh;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    overflow-y: scroll;
+}
