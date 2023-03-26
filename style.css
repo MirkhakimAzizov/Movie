@@ -3,13 +3,6 @@
     padding: 10px;
 }
 
-@media only screen and (max-width:564px) {
-    .hero__inner {
-        /* height: 100vh; */
-        padding: 10px;
-    }
-}
-
 .card {
     max-width: 14rem;
 }
@@ -32,7 +25,7 @@
 
 .bookmark__list {
     position: absolute;
-    top: 100px;
+    top: 70px;
     right: 30px;
     z-index: 2;
     max-height: 70vh;
@@ -69,4 +62,14 @@
 
 .footer__link:hover {
     color: #ffffff79;
+}
+
+@media only screen and (max-width:576px) {
+    .hero__inner {
+        height: 145vh;
+        padding: 10px;
+    }
+    .bookmark__list {
+        top: 120px;
+    }
 }

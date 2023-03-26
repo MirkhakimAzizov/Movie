@@ -20,13 +20,14 @@
 
 <body>
 
+    <!-- Header -->
     <header class="header">
         <nav class="navbar bg-primary" data-bs-theme="dark">
             <div class="container-fluid">
-                <a href="./index.html" class="navbar-brand text-light">Movie</a>
-                <form class="d-flex" role="search">
+                <a href="./index.html" class="navbar-brand text-light">MOVIE</a>
+                <form class="d-flex justify-content-between" role="search">
                     <input class="form-control me-3 text-dark header__search form-control-lg" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn__bookmark btn-outline text-light rounded-5" type="button">
+                    <button class="btn btn__bookmark btn-outline text-light rounded-5 ms-4" type="button">
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bookmarks" viewBox="0 0 16 16">
                                 <path d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5V4zm2-1a1 1 0 0 0-1 1v10.566l3.723-2.482a.5.5 0 0 1 .554 0L11 14.566V4a1 1 0 0 0-1-1H4z"/>
                                 <path d="M4.268 1H12a1 1 0 0 1 1 1v11.768l.223.148A.5.5 0 0 0 14 13.5V2a2 2 0 0 0-2-2H6a2 2 0 0 0-1.732 1z"/>
@@ -38,6 +39,7 @@
         </nav>
     </header>
 
+    <!-- Main -->
     <main class="main bg-primary bg-opacity-50">
         <section class="hero">
             <div class="container">
@@ -47,7 +49,7 @@
                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Film info:</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body d-flex align-items-center justify-content-around flex-column">
@@ -60,6 +62,7 @@
 
                 <div class="row hero__inner">
                     <div class="col-12 col-sm-3 hero__left m-0 p-2">
+                        <!-- selected -->
                         <form action="#" class="form">
 
                             <label for="exampleDataList" class="form-label w-100">
@@ -83,7 +86,7 @@
                         </form>
                     </div>
 
-
+                    <!-- cards -->
                     <div class="col-12 col-sm-9 hero__right bg-white bg-opacity-10 rounded-5">
                         <ul class="hero__list">
 
@@ -94,24 +97,29 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <footer class="text-center text-lg-start bg-primary" style="background-color: #db6930;">
             <div class="container d-flex justify-content-center py-5">
+                <!-- facebook link -->
                 <button type="button" class="btn btn-primary btn-lg btn-floating mx-2 bg-info">
                     <a href="https://facebook.com/MirkhakimAzizov" class="footer__link">
                         <i class="fab fa-facebook-f"></i>
                     </a>
                   </button>
+                <!-- you tube link -->
                 <button type="button" class="btn btn-primary btn-lg btn-floating mx-2 bg-info">
                     <a href="#" class="footer__link">
                         <i class="fab fa-youtube"></i>
                     </a>
                   </button>
+                <!-- instagram link -->
                 <button type="button" class="btn btn-primary btn-lg btn-floating mx-2 bg-info">
                     <a href="#" class="footer__link">
                         <i class="fab fa-instagram"></i>
                     </a>
                   </button>
+                <!-- twitter link -->
                 <button type="button" class="btn btn-primary btn-lg btn-floating mx-2 bg-info">
                     <a href="#" class="footer__link">
                         <i class="fab fa-twitter"></i>
@@ -134,7 +142,8 @@
 <script src="./utils.js"></script>
 <script src="./movies.js"></script>
 <script src="./script.js"></script>
-<!-- Bootstrap5 script file -->
+
+<!-- Bootstrap5 script CDN -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
