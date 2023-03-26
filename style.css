@@ -3,8 +3,19 @@
     padding: 10px;
 }
 
+@media only screen and (max-width:564px) {
+    .hero__inner {
+        /* height: 100vh; */
+        padding: 10px;
+    }
+}
+
 .card {
     max-width: 14rem;
+}
+
+.card-title {
+    height: 35px;
 }
 
 .hero__list {
@@ -13,14 +24,15 @@
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: stretch;
+    justify-content: space-around;
+    align-items: baseline;
     gap: 30px;
     overflow-y: scroll;
 }
 
 .bookmark__list {
     position: absolute;
-    top: 85px;
+    top: 100px;
     right: 30px;
     z-index: 2;
     max-height: 70vh;
