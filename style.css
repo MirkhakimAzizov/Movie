@@ -66,10 +66,13 @@
 
 @media only screen and (max-width:576px) {
     .hero__inner {
-        height: 145vh;
+        height: 140vh;
         padding: 10px;
     }
     .bookmark__list {
         top: 120px;
+    }
+    .card {
+        max-width: 18rem;
     }
 }
