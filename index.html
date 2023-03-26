@@ -14,36 +14,35 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet" />
     <!-- main css -->
     <link rel="stylesheet" href="./style.css">
+    <!-- site title -->
     <title>Movie</title>
 </head>
 
 <body>
 
     <header class="header">
-        <div class="container">
-            <nav class="navbar bg-primary" data-bs-theme="dark">
-                <div class="container-fluid">
-                    <a href="./index.html" class="navbar-brand text-light">Movie</a>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-3 text-dark header__search form-control-lg" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn__bookmark btn-outline text-light rounded-5" type="button">
+        <nav class="navbar bg-primary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a href="./index.html" class="navbar-brand text-light">Movie</a>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-3 text-dark header__search form-control-lg" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn__bookmark btn-outline text-light rounded-5" type="button">
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bookmarks" viewBox="0 0 16 16">
                                 <path d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5V4zm2-1a1 1 0 0 0-1 1v10.566l3.723-2.482a.5.5 0 0 1 .554 0L11 14.566V4a1 1 0 0 0-1-1H4z"/>
                                 <path d="M4.268 1H12a1 1 0 0 1 1 1v11.768l.223.148A.5.5 0 0 0 14 13.5V2a2 2 0 0 0-2-2H6a2 2 0 0 0-1.732 1z"/>
                               </svg>
                         </button>
-                        <ul class="bookmark__list shadow">Bookmark:</ul>
-                    </form>
-                </div>
-            </nav>
-        </div>
+                    <ul class="bookmark__list shadow">Bookmark:</ul>
+                </form>
+            </div>
+        </nav>
     </header>
 
-    <main class="main">
+    <main class="main bg-primary bg-opacity-50">
         <section class="hero">
             <div class="container">
                 <div class="row hero__inner">
-                    <div class="col-3 hero__left m-0 p-0">
+                    <div class="col-3 hero__left m-0 p-2">
                         <form action="#" class="form">
 
                             <label for="exampleDataList" class="form-label w-100">
@@ -51,17 +50,13 @@
                             </label>
 
                             <label for="exampleDataList" class="form-label w-100">
-                                <input class="form-control w-100 hero__search_rating" type="number" onblur="this.value = minMax(this, this.value)" min="6" max="10" list="datalistOptions" id="exampleDataList" placeholder="Rating to search...">
+                                <input class="form-control w-100 hero__search_rating" type="number" onblur="this.value = minMax(this, this.value)" min="6" max="9" list="datalistOptions" id="exampleDataList" placeholder="Rating to search (6-9)...">
                             </label>
 
-                            <select class="form-select hero__select_category mb-2" aria-label="Default select example">
+                            <select class="form-select hero__select_category mb-2 " aria-label="Default select example">
                                 <option hidden>Categoty</option>
                                 <option value="all">All</option>
                               </select>
-
-                            <!-- <label for="exampleDataList" class="form-label w-100">
-                                <input class="form-control w-100 hero__search_category" list="datalistOptions" id="exampleDataList" placeholder="Categoty to search...">
-                            </label> -->
 
                             <div class="btn__list gap-2 justify-content-between align-items-center">
                                 <button class="form__search text-center btn btn-primary w-100 mb-2" type="button">SEARCH</button>
@@ -69,27 +64,10 @@
                             </div>
 
                         </form>
-
-                        <!-- <select class="form-select hero__select_title" aria-label="Default select example">
-                            <option hidden>Title</option>
-                            <option value="all">All</option>
-                          </select>
-
-                        <select class="form-select hero__select_lang my-2" aria-label="Default select example">
-                            <option hidden>Language</option>
-                            <option value="all">All</option>
-                          </select> -->
-
-                        <!--  <select class="form-select hero__select_year" aria-label="Default select example">
-                            <option hidden>Year</option>
-                            <option value="all">All</option>
-                          </select> -->
                     </div>
 
-                    <div class="col-9 hero__right">
+                    <div class="col-9 hero__right bg-white bg-opacity-10 rounded-5">
                         <ul class="hero__list">
-
-
 
                         </ul>
                     </div>
@@ -99,34 +77,43 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <footer class="text-center text-lg-start bg-primary" style="background-color: #db6930;">
-                <div class="container d-flex justify-content-center py-5">
-                    <button type="button" class="btn btn-primary btn-lg btn-floating mx-2 bg-info">
-                    <i class="fab fa-facebook-f"></i>
+        <footer class="text-center text-lg-start bg-primary" style="background-color: #db6930;">
+            <div class="container d-flex justify-content-center py-5">
+                <button type="button" class="btn btn-primary btn-lg btn-floating mx-2 bg-info">
+                    <a href="https://facebook.com/MirkhakimAzizov" class="footer__link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
                   </button>
-                    <button type="button" class="btn btn-primary btn-lg btn-floating mx-2 bg-info">
-                    <i class="fab fa-youtube"></i>
+                <button type="button" class="btn btn-primary btn-lg btn-floating mx-2 bg-info">
+                    <a href="#" class="footer__link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
                   </button>
-                    <button type="button" class="btn btn-primary btn-lg btn-floating mx-2 bg-info">
-                    <i class="fab fa-instagram"></i>
+                <button type="button" class="btn btn-primary btn-lg btn-floating mx-2 bg-info">
+                    <a href="#" class="footer__link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                   </button>
-                    <button type="button" class="btn btn-primary btn-lg btn-floating mx-2 bg-info">
-                    <i class="fab fa-twitter"></i>
+                <button type="button" class="btn btn-primary btn-lg btn-floating mx-2 bg-info">
+                    <a href="#" class="footer__link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
                   </button>
-                </div>
+            </div>
 
-                <!-- Copyright -->
-                <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                    © 2023 Copyright:
-                    <a class="text-white" href="https://t.me/MirkhakimAzizov">MirkhakimAzizov</a>
-                </div>
-                <!-- Copyright -->
-            </footer>
-        </div>
+            <!-- Copyright -->
+            <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2023 Copyright:
+                <a class="text-white" href="https://t.me/MirkhakimAzizov">MirkhakimAzizov</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
     </footer>
 
 </body>
+
+<!-- script file -->
+<script src="./utils.js"></script>
 <script src="./movies.js"></script>
 <script src="./script.js"></script>
 
