@@ -197,7 +197,6 @@ elBookmark.addEventListener("click", (evt) => {
 
     if (evt.target.matches(".btn__more")) {
         let id = evt.target.dataset.more;
-
         nevMovies.forEach(item => {
 
             if (item.id === id) {

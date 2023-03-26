@@ -60,7 +60,7 @@ function renderBookmark(arr) {
                 <li class="list-group-item">Language: ${item.lang}</li>
                 <li class="list-group-item">${item.categories}</li>
                 <li class="list-group-item">
-                    <a class="card-link btn btn-success w-100 mx-auto mb-2" data-more="${item.id}" data-bs-toggle="modal" data-bs-target="#exampleModal">More</a>
+                    <a class="card-link btn btn-success w-100 mx-auto mb-2 btn__more" data-more="${item.id}" data-bs-toggle="modal" data-bs-target="#Modal">More</a>
                     <a href="${item.link}" class="card-link btn btn-danger w-100 mx-auto mb-2">YouTube</a>
                     <a class="card-link btn btn-warning btn__add w-100 mx-auto" data-id="${item.id}">REMOVE</a>
                 </li>
