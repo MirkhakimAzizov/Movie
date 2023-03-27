@@ -17,7 +17,7 @@ let ElRightTop = document.querySelector(".hero__right__pagenation");
 
 
 
-movies.splice(52);
+movies.splice(102);
 
 
 /* =============== New Arr =============== */
