@@ -13,9 +13,11 @@ let goBack = document.querySelector(".form__all");
 let elBookmark = document.querySelector(".bookmark__list");
 let elBookmarkBtn = document.querySelector(".btn__bookmark");
 let elModalBody = document.querySelector(".modal-body");
+let ElRightTop = document.querySelector(".hero__right__pagenation");
 
 
-movies.splice(50);
+
+movies.splice(52);
 
 
 /* =============== New Arr =============== */
@@ -26,9 +28,19 @@ let bookmarkArr = [];
 
 /* =============== Function =============== */
 mainArrEditing(movies, nevMovies);
-renderUi(nevMovies);
+// renderUi(nevMovies);
 arrSelectFun(nevMovies, arrCategory);
 selected(arrCategory.sort(), elSelectCategory);
+pagenation(nevMovies);
+
+
+/* =============== Pagenation =============== */
+let elPagenation = document.querySelector(".pagenation");
+let elCaruselInner = document.querySelector(".pagenation__box__inner");
+let elBtn = document.querySelectorAll(".pagenation__btn-n");
+let p = 0;
+
+renderPagenation(nevMovies);
 
 
 /* =============== Main search btn =============== */
@@ -223,6 +235,34 @@ elBookmark.addEventListener("click", (evt) => {
             }
 
         });
+
+    }
+
+});
+
+
+/* =============== Pagenation btn =============== */
+elPagenation.addEventListener("click", (evt) => {
+    evt.preventDefault();
+
+    if (evt.target.textContent === ">>") {
+        p++;
+
+        if (p > elBtn.length - 3) {
+            p = elBtn.length - 3;
+        }
+
+        elCaruselInner.style.transform = `translateX(${-p*56}px)`;
+
+    }
+    if (evt.target.textContent === "<<") {
+        p--;
+
+        if (p < 0) {
+            p = 0;
+        }
+
+        elCaruselInner.style.transform = `translateX(${-p*56}px)`;
 
     }
 

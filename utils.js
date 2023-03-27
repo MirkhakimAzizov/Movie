@@ -149,3 +149,69 @@ function minMax(that, value) {
     }
 
 }
+
+
+/* =============== Pagenation function =============== */
+function pagenation(arr) {
+
+    let n = Math.ceil(arr.length / 10);
+
+    let elPagenation = document.createElement("div");
+    elPagenation.setAttribute("class", "pagenation d-flex justify-content-start align-items-center gap-2");
+
+    let elDiv = document.createElement("div");
+    let elCaruselInner = document.createElement("div");
+    let elNext = document.createElement("button");
+    let elPrev = document.createElement("button");
+
+    elNext.setAttribute("class", "pagenation__btn btn btn-primary text-center d-flex justify-content-center align-items-center");
+    elNext.textContent = ">>";
+    elPrev.setAttribute("class", "pagenation__btn btn btn-primary text-center d-flex justify-content-center align-items-center");
+    elPrev.textContent = "<<";
+
+    elDiv.setAttribute("class", "pagenation__box d-flex justify-content-start align-items-center");
+    elCaruselInner.setAttribute("class", "pagenation__box__inner d-flex justify-content-start align-items-center");
+
+    for (let i = 1; i <= n; i++) {
+
+        let btn = document.createElement("button");
+        btn.dataset.page = `0`;
+        btn.dataset.id = `${i}`;
+        btn.setAttribute("class", "pagenation__btn pagenation__btn-n btn btn-primary text-center d-flex justify-content-center align-items-center me-2");
+        btn.textContent = `${i}`;
+        elCaruselInner.append(btn);
+    }
+
+    elPagenation.append(elPrev);
+    elDiv.append(elCaruselInner);
+    elPagenation.append(elDiv);
+    elPagenation.append(elNext);
+    ElRightTop.append(elPagenation);
+
+}
+
+
+/* =============== Pagenation render function =============== */
+function renderPagenation(arr) {
+
+    let newArr = arr.slice(0, 10);
+    renderUi(newArr);
+
+    elPagenation.addEventListener("click", (evt) => {
+
+        evt.preventDefault();
+
+        if (evt.target.dataset.page === "0") {
+
+            let id = evt.target.dataset.id;
+
+            elList.innerHTML = '';
+            newArr = arr.slice((id - 1) * 10, (id * 10));
+            renderUi(newArr);
+
+        }
+
+    });
+
+
+}
